@@ -14,7 +14,6 @@
   <link rel="shortcut icon" href="favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
   <meta name="apple-mobile-web-app-title" content="Dossani GM" />
-  <link rel="manifest" href="site.webmanifest" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -49,7 +48,7 @@
       --ease:cubic-bezier(.16,1,.3,1);
     }
     *{box-sizing:border-box;margin:0;padding:0;}
-    html{font-size:16px;scroll-behavior:smooth;}
+    html{scroll-behavior:smooth;}
     body{font-family:var(--font-sans);background:var(--surface-page);color:var(--text-body);
       line-height:1.5;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
 
@@ -59,7 +58,7 @@
       padding:.4rem .9rem .46rem;}
     .plate .dpm{font-family:var(--font-display);font-weight:700;color:#fff;letter-spacing:.13em;
       line-height:1;font-size:1.5rem;}
-    .plate .plate-rule{width:1.75rem;height:3px;background:var(--accent);border-radius:2px;margin-top:.35rem;}
+    .plate .plate-rule{width:28px;height:3px;background:var(--accent);border-radius:2px;margin-top:.35rem;}
     .plate.mini{flex-direction:row;padding:.28rem .5rem;border-width:2px;border-radius:7px;box-shadow:none;}
     .plate.mini .dpm{font-size:.98rem;letter-spacing:.1em;}
     .plate.mini .plate-rule{display:none;}
@@ -68,12 +67,12 @@
     .topbar{position:sticky;top:0;z-index:50;background:rgba(20,16,74,.82);
       backdrop-filter:saturate(150%) blur(12px);-webkit-backdrop-filter:saturate(150%) blur(12px);
       border-bottom:1px solid rgba(199,195,241,.16);}
-    .topbar-inner{max-width:75rem;margin:0 auto;padding:.6rem 1.5rem;display:flex;align-items:center;gap:1rem;}
+    .topbar-inner{max-width:1200px;margin:0 auto;padding:.6rem 1.5rem;display:flex;align-items:center;gap:1rem;}
     .topbar-brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;}
     .topbar-word{font-family:var(--font-display);font-weight:600;color:#fff;font-size:.95rem;
       letter-spacing:var(--tracking-wide);white-space:nowrap;}
     .topbar-search{margin-left:auto;}
-    .topbar-search .field{width:15.6rem;}
+    .topbar-search .field{width:250px;}
 
     /* Hero */
     .hero{position:relative;overflow:hidden;color:#fff;border-bottom:1px solid rgba(199,195,241,.14);
@@ -84,7 +83,7 @@
     .hero::after{content:"DPM";position:absolute;right:-1rem;bottom:-2.4rem;font-family:var(--font-display);
       font-weight:900;font-size:9rem;color:rgba(199,195,241,.06);letter-spacing:.05em;pointer-events:none;
       line-height:.8;user-select:none;}
-    .hero-inner{position:relative;z-index:1;max-width:75rem;margin:0 auto;padding:1.15rem 1.5rem 1.25rem;
+    .hero-inner{position:relative;z-index:1;max-width:1200px;margin:0 auto;padding:1.15rem 1.5rem 1.25rem;
       display:flex;flex-direction:column;align-items:center;text-align:center;}
     .hero .plate{margin-bottom:.65rem;}
     .eyebrow{font-family:var(--font-display);font-weight:600;font-size:.7rem;
@@ -109,8 +108,8 @@
     .field:focus-within{border-color:var(--navy-300);box-shadow:0 0 0 3px rgba(199,195,241,.15);}
 
     /* Board: featured tile on top, then a centred grid */
-    main{max-width:75rem;margin:0 auto;padding:1.2rem 1.5rem 0.9rem;}
-    .board{max-width:49.25rem;margin:0 auto;}
+    main{max-width:1200px;margin:0 auto;padding:1.2rem 1.5rem 0.9rem;}
+    .board{max-width:788px;margin:0 auto;}
     .board-top{display:flex;justify-content:center;margin-bottom:var(--gap);}
     .board-top .tile{width:calc((100% - 2 * var(--gap)) / 3);}
     .board-grid{display:flex;flex-wrap:wrap;gap:var(--gap);justify-content:center;}
@@ -128,9 +127,9 @@
     .board-top .tile{border-color:var(--navy-200);box-shadow:var(--shadow-md);
       background:linear-gradient(180deg,var(--navy-50),#fff);}
 
-    .tile-icon{width:2.625rem;height:2.625rem;border-radius:10px;flex-shrink:0;display:grid;place-items:center;
+    .tile-icon{width:42px;height:42px;border-radius:10px;flex-shrink:0;display:grid;place-items:center;
       overflow:hidden;background:var(--navy-50);border:1px solid var(--navy-100);}
-    .tile-icon img{max-width:1.7rem;max-height:1.7rem;width:auto;height:auto;display:block;object-fit:contain;}
+    .tile-icon img{max-width:27px;max-height:27px;width:auto;height:auto;display:block;object-fit:contain;}
     .tile-icon.letter{font-family:var(--font-display);font-weight:700;font-size:1.25rem;color:var(--navy-700);}
 
     .tile-body{min-width:0;width:100%;}
@@ -144,7 +143,7 @@
     .no-results strong{color:var(--text-heading);}
 
     /* Footer */
-    footer{border-top:1px solid var(--divider);max-width:75rem;margin:0 auto;padding:1rem 1.5rem 1.2rem;
+    footer{border-top:1px solid var(--divider);max-width:1200px;margin:0 auto;padding:1rem 1.5rem 1.2rem;
       display:flex;flex-wrap:wrap;gap:.7rem 1.4rem;align-items:center;justify-content:space-between;
       color:var(--text-muted);font-size:.82rem;}
     footer .f-brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;}
@@ -160,21 +159,32 @@
     @media (max-width:640px){
       .board-grid .tile,.board-top .tile{width:calc((100% - 1 * var(--gap)) / 2);}
     }
-    @media (max-width:330px){
+    @media (max-width:400px){
       .board-grid .tile,.board-top .tile{width:100%;}
     }
     @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto;}}
   
-    /* Smart zoom: scale the whole UI to the device */
-    @media (max-width:600px){html{font-size:14.5px;}}
-    @media (max-width:380px){html{font-size:13.5px;}}
-    @media (min-width:1200px){html{font-size:18.5px;}}
-    @media (min-width:1600px){html{font-size:21px;}}
-    @media (min-width:1920px){html{font-size:23.5px;}}
+    /* ---- Fit-to-window: every app on one screen, scaled to fill the window ---- */
+    html,body{height:100%;overflow:hidden;}
+    #fit{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;
+      overflow:hidden;background:var(--surface-page);}
+    #stage{transform-origin:center center;width:fit-content;--tilew:240px;--cols:3;}
+    #stage .topbar{display:none;}
+    #stage main{max-width:none;padding:14px 20px 8px;}
+    #stage .board{max-width:none;}
+    #stage .hero h1{font-size:2rem;}
+    #stage .hero-inner{padding:16px 20px 18px;}
+    #stage .board-top{margin-bottom:14px;}
+    #stage .board-top .tile{width:var(--tilew);}
+    #stage .board-grid{display:grid;grid-template-columns:repeat(var(--cols),var(--tilew));
+      gap:14px;justify-content:center;}
+    #stage .board-grid .tile{width:var(--tilew);}
+    #stage footer{max-width:none;padding:10px 20px 14px;}
   </style>
 </head>
 
 <body>
+  <div id="fit"><div id="stage">
   <header class="topbar">
     <div class="topbar-inner">
       <a class="topbar-brand" href="#top" aria-label="General Manager Portal home">
@@ -215,6 +225,7 @@
       <div class="version">v1.0</div>
     </div>
   </footer>
+  </div></div>
 
   <script>
   /* ======================================================================
@@ -322,6 +333,34 @@
   });
 
   render();
+
+  /* ---- Scale the stage to fill the window; pick the best column count ---- */
+  (function(){
+    var stage=document.getElementById('stage');
+    var MAXS=3, MARGIN=4;
+    function fit(){
+      if(!stage) return;
+      var availW=window.innerWidth-MARGIN, availH=window.innerHeight-MARGIN;
+      var n=0; stage.querySelectorAll('.board-grid .tile').forEach(function(t){if(t.style.display!=='none')n++;});
+      var maxC=Math.min(8, Math.max(2, n||2));
+      var best=null;
+      for(var c=2;c<=maxC;c++){
+        stage.style.setProperty('--cols',c);
+        var w=stage.offsetWidth, h=stage.offsetHeight;
+        var s=Math.min(availW/w, availH/h);
+        if(!best||s>best.s){best={c:c,s:s};}
+      }
+      stage.style.setProperty('--cols',best.c);
+      stage.style.transform='scale('+Math.min(best.s,MAXS)+')';
+    }
+    var raf; function schedule(){cancelAnimationFrame(raf);raf=requestAnimationFrame(fit);}
+    window.addEventListener('resize',schedule);
+    window.addEventListener('orientationchange',schedule);
+    if(document.fonts&&document.fonts.ready){document.fonts.ready.then(fit);}
+    window.addEventListener('load',fit);
+    window.__fit=fit; fit(); setTimeout(fit,150);
+  })();
+
   </script>
   <script>window.addEventListener("pageshow",function(e){if(e.persisted)location.reload();});</script>
 </body>
